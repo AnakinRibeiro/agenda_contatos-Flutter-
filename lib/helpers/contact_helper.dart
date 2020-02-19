@@ -38,7 +38,7 @@ class ContactHelper {
     // Caminho para a pasta do banco de dados
     final databasesPath = await getDatabasesPath();
     // Juntando o caminho da pasta, com o nome do banco, para obter o caminho completo
-    final path = join(databasesPath, "contacts.db");
+    final path = join(databasesPath, "contactsnew.db");
 
     // Abrindo o banco a primeira vez, passando o caminho, versão e a função para criar a primeira tabela
     return await openDatabase(path, version: 1,
@@ -137,6 +137,9 @@ class Contact {
   String email;
   String phone;
   String img;
+
+  // Construtor vazio
+  Contact();
 
   // Construtor
   Contact.fromMap(Map map) {
