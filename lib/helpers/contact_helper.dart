@@ -45,7 +45,7 @@ class ContactHelper {
         onCreate: (Database db, int newerVersion) async {
       await db.execute(
           // Query para criação da tabela
-          "CREATE TABLE $contactTable($idColumn INTERGER PRIMARY KEY, $nameColumn TEXT, $emailColumn TEXT,"
+          "CREATE TABLE $contactTable($idColumn INTEGER PRIMARY KEY, $nameColumn TEXT, $emailColumn TEXT,"
           "$phoneColumn TEXT, $imgColumn TEXT)");
     });
   }
